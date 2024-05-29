@@ -1,26 +1,26 @@
 <?php
 
-echo "I'm Sidra Gul";
-echo "Hello, World!";
-echo "<br>";
-echo "wlcome to php";
+// echo "I'm Sidra Gul";
+// echo "Hello, World!";
+// echo "<br>";
+// echo "wlcome to php";
 
 
-$name = "Zakia"; // This is a string variable
-$age = 30; // This is an integer variable
-$isMarried = true; // This is a boolean variable
+// $name = "Zakia"; // This is a string variable
+// $age = 30; // This is an integer variable
+// $isMarried = true; // This is a boolean variable
 
-echo "<br>";
-echo "Name: " . $name . "<br>";
-echo "Age: " . $age . "<br>";
-echo "Married: " . ($isMarried ? "Yes" : "No");
+// echo "<br>";
+// echo "Name: " . $name . "<br>";
+// echo "Age: " . $age . "<br>";
+// echo "Married: " . ($isMarried ? "Yes" : "No");
 
-echo "<br>";
+// echo "<br>";
 
-// if ($age >= 35) {
-//     echo "You are an adult.";
-// }
-echo "<br>";
+// // if ($age >= 35) {
+// //     echo "You are an adult.";
+// // }
+// echo "<br>";
 
 // $age1 = 15;
 // if ($age1 >= 18) {
@@ -32,7 +32,7 @@ echo "<br>";
 // }
 
 
-echo "<br>";
+// echo "<br>";
 
 // $month = "Dec";
 // switch ($month) {
@@ -108,12 +108,12 @@ echo "<br>";
 // }
 
 
-for ($count = 1; $count <= 5; $count++) {
-   for($count1 = 1; $count1 <= $count; $count1++) {
-       echo "🤩";  
-   }
-   echo "<br>";
-}
+// for ($count = 1; $count <= 5; $count++) {
+//    for($count1 = 1; $count1 <= $count; $count1++) {
+//        echo "🤩";  
+//    }
+//    echo "<br>";
+// }
 
 // *
 // **
@@ -121,8 +121,55 @@ for ($count = 1; $count <= 5; $count++) {
 // ****
 // *****
 
+?>
 
 
 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        a {
+            color: purple;
+            text-decoration: none;
+            /* font-style: italic; */
+            font-weight: bold;
+        }
+        a:hover {
+            color: #5a5a5a;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+        }
+        li:hover {
+            background-color: #e8e8e8;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <?php
+        $files = scandir(__DIR__);
+        foreach ($files as $file) {
+            if ($file != '.' && $file != '..' && $file != '.git' && $file != 'index.php') {
+                echo "<li><a href=\"$file\">$file</a></li>";
+            }
+        }
+        ?>
+    </ul>
+</body>
+</html>
 
 
